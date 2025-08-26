@@ -6,29 +6,30 @@ class TypeWriter {
     this.deletingSpeed = options.deletingSpeed || 50;
     this.pauseDuration = options.pauseDuration || 1500;
     this.loop = options.loop !== false; // default true
-    this.cursor = options.cursor || "|";
-    this.cursorBlink = options.cursorBlink !== false;
+    this.cursorChar = options.cursor || "|";
     this.text = "";
     this.textIndex = 0;
-    this.charIndex = 0;
     this.isDeleting = false;
 
-    if (this.cursorBlink) {
-      this._createCursor();
-    }
+    // Create wrapper so cursor stays in line
+    this.wrapper = document.createElement("span");
+    this.wrapper.className = "typewriter-text";
+    this.cursor = document.createElement("span");
+    this.cursor.className = "typewriter-cursor";
+    this.cursor.textContent = this.cursorChar;
 
+    this.element.innerHTML = "";
+    this.element.appendChild(this.wrapper);
+    this.element.appendChild(this.cursor);
+
+    this._blinkCursor();
     this._type();
   }
 
-  _createCursor() {
-    const cursorEl = document.createElement("span");
-    cursorEl.className = "typewriter-cursor";
-    cursorEl.textContent = this.cursor;
-    this.element.insertAdjacentElement("afterend", cursorEl);
-
+  _blinkCursor() {
     setInterval(() => {
-      cursorEl.style.visibility =
-        cursorEl.style.visibility === "hidden" ? "visible" : "hidden";
+      this.cursor.style.visibility =
+        this.cursor.style.visibility === "hidden" ? "visible" : "hidden";
     }, 500);
   }
 
@@ -41,7 +42,7 @@ class TypeWriter {
       this.text = currentText.substring(0, this.text.length + 1);
     }
 
-    this.element.textContent = this.text;
+    this.wrapper.textContent = this.text;
 
     let delay = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
 
@@ -55,7 +56,7 @@ class TypeWriter {
         if (this.loop) {
           this.textIndex = 0;
         } else {
-          return; // stop if not looping
+          return;
         }
       }
     }

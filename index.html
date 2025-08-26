@@ -4,48 +4,87 @@
   <meta charset="UTF-8">
   <title>Average Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="glass-surface.css" />
+  <link rel="stylesheet" href="glass-surface.css" />
 </head>
 <body>
 
-    <header class="topbar">
-        <div class="avtr" aria-hidden="true">
-        <img src="avatar.png" alt="">
+  <header class="topbar">
+    <div class="avtr" aria-hidden="true">
+      <img src="avatar.png" alt="">
+    </div>
+    <div class="spacer"></div>
+    <div class="btns">
+      <!-- GitHub button -->
+      <button class="icon-btn" onclick="window.open('https://github.com/Archuser202', '_blank')" aria-label="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="icon-img">
+      </button>
+
+      <!-- YouTube button -->
+      <button class="icon-btn" onclick="window.open('https://www.youtube.com/@Arch-User-202', '_blank')" aria-label="YouTube">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" class="icon-img">
+      </button>
+    </div>
+  </header>
+
+  <main class="glass-surface">
+    <h1>Average Portfolio</h1>
+    <p>Welcome to my portfolio website! Here, you'll find a collection of my projects, skills, and experiences. Feel free to explore and learn more about what I do.</p>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <!-- Project 1 -->
+        <a href="https://archuser202.github.io/QR-CODE-GENERATOR-GOOGLE/" target="_blank" rel="noopener noreferrer" class="project-card">
+          <img src="/assets/Screenshot 2025-08-26 204136.png" alt="Project 1">
+          <div class="project-info">
+            <h3>QR Code Generator inspired by Google</h3>
+            <p>Why did I put the title?</p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="" alt="Project 2">
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>Another experiment, this one’s all about performance.</p>
+          </div>
         </div>
-        <div class="spacer"></div>
-        <div class="btns">
-            <button class="icon-btn" onclick="window.open('https://github.com/Archuser202', '_blank')" aria-label="github"><i class="ph ph-github-logo"></i></button>
-            <button class="icon-btn" onclick="window.open('https://www.youtube.com/@Arch-User-202', '_blank')" aria-label="github"><i class="ph ph-github-logo"></i></button>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="" alt="Project 3">
+          <div class="project-info">
+            <h3>Project Three</h3>
+            <p>My take on building something absolutely cursed.</p>
+          </div>
         </div>
-    </header>
 
-    <main class="glass-surface">
-        <h1>Average Portfolio</h1>
-        <p>Welcome to my portfolio website! Here, you'll find a collection of my projects, skills, and experiences. Feel free to explore and learn more about what I do.</p>
-        <section>
-            <h2>Projects</h2>
+      </div>
+    </section>
 
-        </section>
-        <section>
-            <h2>Skills</h2>
-            
-            <h1 id="typewriter"></h1>
-                <script src="JS/typewrite.js"></script>
-                <script>
-                    const element = document.getElementById("typewriter");
-                    new TypeWriter(element,
-                    ["Chess Player, Programmer,Linux Enthusiast, Web Developer, Tech Reviewer"],
-                    {
-                        typingSpeed: 50,
-                        pauseDuration: 1000,
-                        cursor: "|",
-                        colors: ["var(--red)", "var(--green)", "var(--blue)"]
-                    }
-                    );
-                </script>
-        </section>
-        <section>
+    <!-- Skills Section -->
+    <section>
+      <h2>Skills</h2>
+      <h1 id="typewriter"></h1>
+    </section>
 
+  </main>
+
+  <script src="JS/typewrite.js"></script>
+  <script>
+    const element = document.getElementById("typewriter");
+    new TypeWriter(element, 
+      ["Chess Player, Programmer, Linux Enthusiast, Web Developer, Tech Reviewer"], 
+      {
+        typingSpeed: 50,
+        pauseDuration: 1000,
+        cursor: "|"
+      }
+    );
+  </script>
 
 </body>
 </html>
