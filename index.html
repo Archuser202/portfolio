@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Average Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="glass-surface.css" />
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="avtr" aria-hidden="true">
+        <img src="avatar.png" alt="">
+        </div>
+        <div class="spacer"></div>
+        <div class="btns">
+            <button class="icon-btn" onclick="window.open('https://github.com/Archuser202', '_blank')" aria-label="github"><i class="ph ph-github-logo"></i></button>
+            <button class="icon-btn" onclick="window.open('https://www.youtube.com/@Arch-User-202', '_blank')" aria-label="github"><i class="ph ph-github-logo"></i></button>
+        </div>
+    </header>
+
+    <main class="glass-surface">
+        <h1>Average Portfolio</h1>
+        <p>Welcome to my portfolio website! Here, you'll find a collection of my projects, skills, and experiences. Feel free to explore and learn more about what I do.</p>
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> Description of project 1.</li>
+                <li><strong>Project 2:</strong> Description of project 2.</li>
+                <li><strong>Project 3:</strong> Description of project 3.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            
+            <h1 id="typewriter"></h1>
+                <script src="JS/typewrite.js"></script>
+                <script>
+                    const element = document.getElementById("typewriter");
+                    new TypeWriter(element,
+                    ["Chess Player, Programmer,Linux Enthusiast, Web Developer, Tech Reviewer"],
+                    {
+                        typingSpeed: 50,
+                        pauseDuration: 1000,
+                        cursor: "|",
+                        colors: ["var(--red)", "var(--green)", "var(--blue)"]
+                    }
+                    );
+                </script>
+        </section>
+        <section>
+
+
+</body>
+</html>
