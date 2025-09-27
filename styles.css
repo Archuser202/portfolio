@@ -40,8 +40,8 @@ body {
 
   background-size: cover; /* Stretches to cover the entire element */
   background-color: var(--base);
-
-  color: var(--text);
+  background-image: url("wall.jpg");
+  color: var(--maroon);
   font-family: JetBrainsMono Nerd Font, sans-serif;
 }
 
